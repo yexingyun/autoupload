@@ -1,0 +1,9 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "command": "changed=$(git status --porcelain | wc -l | tr -d ' '); if [ \"$changed\" -eq 0 ]; then exit 0; fi; git add -A && git commit -m \"auto: $changed file(s) changed — $(date '+%Y-%m-%d %H:%M')\""
+      }
+    ]
+  }
+}
